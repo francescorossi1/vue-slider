@@ -25,7 +25,7 @@
                 <button id="prev" class="bi bi-arrow-left-circle-fill" @click="goToPrev"></button>
             </div>
             <div class="row row-cols-5 py-3 gallery">
-                <figure class="col item" :class="{'active' : i === activeItem}" v-for="(image, i) in images">
+                <figure class="col item" :class="{'active' : i === activeItem}" v-for="(image, i) in images" @click="activeItem = i">
                     <img :src="image.url" :alt="image.description" class="img-fluid">
                 </figure>
             </div>
